@@ -1,0 +1,1 @@
+ALTER TABLE "" ADD COLUMN "is_phone_confirmed" boolean DEFAULT false NOT NULL;

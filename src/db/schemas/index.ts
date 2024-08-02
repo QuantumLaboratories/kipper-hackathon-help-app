@@ -1,10 +1,11 @@
-import { pgTable, uuid, varchar } from 'drizzle-orm/pg-core'
+import { boolean, pgTable, uuid, varchar } from 'drizzle-orm/pg-core'
 
 export const user = pgTable('', {
   id: uuid('id').primaryKey().defaultRandom(),
   cpf: varchar('cpf', { length: 11 }),
   fullName: varchar('full_name').notNull(),
   phoneNumber: varchar('phone_number', { length: 11 }),
+  isPhoneConfirmed: boolean('is_phone_confirmed').notNull().default(false),
 })
 
 export const helpPoint = pgTable('help_point', {
