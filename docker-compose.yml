@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:alpine
+    ports: ["5432:5432"]
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=hackathon_help_app
+    volumes: ["hackathon_help_pg_data:/postgres"]
+
+volumes:
+  hackathon_help_pg_data:
